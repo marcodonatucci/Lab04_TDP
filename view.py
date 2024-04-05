@@ -34,7 +34,7 @@ class View(object):
                    alignment=ft.MainAxisAlignment.START)
         )
         # Row1
-        self.lvOut = ft.ListView()
+        self.lvOut = ft.ListView(expand=1,spacing=10,padding=20,auto_scroll=True)
         self.ddLanguage = ft.Dropdown(label="Language", width=150, on_change=self.verifyLanguage)
         self.fillDdLanguage()
         row1 = ft.Row([self.ddLanguage])
