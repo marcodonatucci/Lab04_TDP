@@ -2,6 +2,25 @@ import time
 import flet as ft
 import model as md
 
+
+def printLanguage(language):
+    if language == "italian":
+        return "Hai selezionato la lingua italiana"
+    elif language == "english":
+        return "You selected the english language"
+    elif language == "spanish":
+        return "Has seleccionado el idioma español"
+
+
+def printSearch(modality):
+    if modality == "Default":
+        return "Default search selected"
+    elif modality == "Linear":
+        return "Linear search selected"
+    elif modality == "Dichotomic":
+        return "Dichotomic search selected"
+
+
 class SpellChecker:
 
     def __init__(self, view):
@@ -44,10 +63,9 @@ class SpellChecker:
             case _:
                 return None
 
-
     def printMenu(self):
         print("______________________________\n" +
-              "      SpellChecker 101\n"+
+              "      SpellChecker 101\n" +
               "______________________________\n " +
               "Seleziona la lingua desiderata\n"
               "1. Italiano\n" +

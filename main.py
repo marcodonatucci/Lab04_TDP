@@ -11,4 +11,5 @@ def main(page: ft.Page):
     view.setController(controller)
     view.add_content()
 
+
 ft.app(target=main)
