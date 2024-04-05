@@ -101,8 +101,8 @@ class View(object):
             self.lvOut.controls.append(ft.Text("Select modality!", color="red"))
             self.page.update()
             return
-        result = sc.handleSentence(self.sentence.value, self.ddLanguage.value, self.ddSearch.value)
+        result,time = sc.handleSentence(self.sentence.value, self.ddLanguage.value, self.ddSearch.value)
         self.lvOut.controls.append(ft.Text(f"'{self.sentence.value}':", color="green"))
-        self.lvOut.controls.append(ft.Text(result, color="green"))
+        self.lvOut.controls.append(ft.Text(f"{result}; Time:{time}.", color="green"))
         self.sentence.value = ""
         self.page.update()
